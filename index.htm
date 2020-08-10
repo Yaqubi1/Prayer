@@ -26,12 +26,12 @@
     </header>
 
 
-    <div><iframe src="arabiska1.htm" width="99%" name="iframe_main"></iframe></div>
+    <div><iframe src="arabiska1.htm" width="99%" name="iframe_main" id="myiframe"></iframe></div>
 
     <div id="div-languages">
-        <div><a href="arab1.htm" target="iframe_main"><button onclick="arabicClick()">Arabiska</button></a></div>
-        <div><a href="sven1.htm" target="iframe_main"><button onclick="swedishClick()">Svenska</button></a></div>
-        <div><a href="tran1.htm" target="iframe_main"><button onclick="transliterationClick()">Translitteration</button></a></div>
+        <div><button onclick="arabicClick()">Arabiska</button></div>
+        <div><button onclick="swedishClick()">Svenska</button></div>
+        <div><a href="#" target="iframe_main"><button onclick="transliterationClick()">Translitteration</button></a></div>
     </div>
 
     <div id="div-navigation">
@@ -40,5 +40,6 @@
     </div>
 
 </main>
+<script src="js/script.js"></script>
 </body>
 </html>
