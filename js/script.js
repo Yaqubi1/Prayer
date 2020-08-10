@@ -5,13 +5,15 @@ let pageCounter = 1;
 // add 1 on the filename and target iframe
 function nextClick() {
     pageCounter++;
-    changeToCurrentPage();
+    changePage();
+    changeSound();
 }
 
 // subtract 1 on the filename and target iframe
 function backClick() {
     pageCounter--;
-    changeToCurrentPage();
+    changePage();
+    changeSound();
 }
 
 // target iframe with the current number in the iframe
@@ -29,13 +31,17 @@ function arabicClick() {
     document.getElementById("myiframe").src = "arab" + pageCounter + ".htm";
 }
 
-function changeToCurrentPage() {
-    let determineSource = document.getElementById("myiframe").src;
-    if (determineSource.charAt(determineSource.length - 9) === "a") {
+function changeSound() {
+    document.getElementById("audioplayer").src = "sound/sound" + pageCounter + ".mp3";
+}
+
+function changePage() {
+    let iframeSource = document.getElementById("myiframe").src;
+    if (iframeSource.charAt(iframeSource.length - 9) === "a") {
         document.getElementById("myiframe").src = "arab" + pageCounter + ".htm";
-    } else if (determineSource.charAt(determineSource.length - 9) === "s") {
+    } else if (iframeSource.charAt(iframeSource.length - 9) === "s") {
         document.getElementById("myiframe").src = "sven" + pageCounter + ".htm";
-    } else if (determineSource.charAt(determineSource.length - 9) === "t") {
+    } else if (iframeSource.charAt(iframeSource.length - 9) === "t") {
         document.getElementById("myiframe").src = "tran" + pageCounter + ".htm";
     }
 }
