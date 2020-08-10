@@ -33,6 +33,8 @@ function arabicClick() {
 
 function changeSound() {
     document.getElementById("audioplayer").src = "sound/sound" + pageCounter + ".mp3";
+    let audio = document.getElementById('audio');
+    audio.load();
 }
 
 function changePage() {
