@@ -1,0 +1,50 @@
+#appbody {
+    background-color: rgb(28, 199, 142);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#kaba {
+    height: 10vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+iframe {
+    background-color: white;
+    height: 60vh;
+    border: none;
+}
+
+.maintext {
+    text-align: center;
+}
+
+#div-languages {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+#div-navigation {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    height: 5vh;
+}
