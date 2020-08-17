@@ -4,16 +4,24 @@ let pageCounter = 1;
 
 // add 1 on the filename and target iframe
 function nextClick() {
-    pageCounter++;
-    changePage();
-    changeSound();
+    if (document.getElementById("prayertype").innerHTML === "Morgonbönen") {
+        if (pageCounter < 13) {
+            pageCounter++;
+            changePage();
+            changeSound();
+        }
+    }
+    
 }
 
 // subtract 1 on the filename and target iframe
 function backClick() {
-    pageCounter--;
-    changePage();
-    changeSound();
+    if (pageCounter > 1) {
+        pageCounter--;
+        changePage();
+        changeSound();
+    }
+    
 }
 
 // target iframe with the current number in the iframe
@@ -41,9 +49,15 @@ function changePage() {
     let iframeSource = document.getElementById("myiframe").src;
     if (iframeSource.charAt(iframeSource.length - 9) === "a") {
         document.getElementById("myiframe").src = "arab" + pageCounter + ".htm";
+    } else if (iframeSource.charAt(iframeSource.length - 10) === "a") {
+        document.getElementById("myiframe").src = "arab" + pageCounter + ".htm";
     } else if (iframeSource.charAt(iframeSource.length - 9) === "s") {
+        document.getElementById("myiframe").src = "sven" + pageCounter + ".htm";
+    } else if (iframeSource.charAt(iframeSource.length - 10) === "s") {
         document.getElementById("myiframe").src = "sven" + pageCounter + ".htm";
     } else if (iframeSource.charAt(iframeSource.length - 9) === "t") {
         document.getElementById("myiframe").src = "tran" + pageCounter + ".htm";
-    }
+    } else if (iframeSource.charAt(iframeSource.length - 10) === "t") {
+        document.getElementById("myiframe").src = "tran" + pageCounter + ".htm";
+    } 
 }

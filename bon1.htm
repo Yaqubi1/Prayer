@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Böneguiden">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Böneguiden</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="appbody">
+<main>
+
+    <header>
+        <div>
+            <h3>Rak'a:</h3>
+            <h3>1</h3>
+        </div>
+        <div id="top-middle">
+            <img src="img/egenkaba.png" id="kaba">
+            <h3 id="prayertype">Morgonbönen</h3>
+        </div>
+        <div>
+            <h3>Position:</h3>
+            <h3 id="position">Stå upp</h3>
+        </div>
+    </header>
+
+
+    <div><iframe src="arab1.htm" width="99%" name="iframe_main" id="myiframe"></iframe></div>
+    <audio controls style="height: 30px; width: 95vw;" id="audio">
+        <source src="sound/sound1.mp3" type="audio/mpeg" id="audioplayer"></source>
+      Din webbläsare stödjer inte ljuduppspelaren.
+      </audio>
+    <div id="div-languages">
+        <div><button onclick="arabicClick()">Arabiska</button></div>
+        <div><button onclick="swedishClick()">Svenska</button></div>
+        <div><button onclick="transliterationClick()">Translitteration</button></div>
+    </div>
+
+    <div id="div-navigation">
+        <div><button onclick="backClick()">Bakåt</button></div>
+        <div><button>Meny</button></div>
+        <div><button onclick="nextClick()">Nästa</button></div>
+    </div>
+
+</main>
+<script src="js/script.js"></script>
+</body>
+</html>
